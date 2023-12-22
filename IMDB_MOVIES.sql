@@ -228,7 +228,7 @@ GROUP BY genre, name, director_rank Limit 3;
 QUESTION 3) Find the top two actors whose movies have a median rating>=8
 answer 3)
 
-SELECT ro.name_id,COUNT(r.movie_id) AS movies 
+SELECT ro.name_id,COUNT(r.movie_id) AS movies
 FROM role_mapping ro
 LEFT JOIN rating r ON  ro.movie_id=r.movie_id 
 WHERE ro.category = 'actor' AND r.median_rating >=8
